@@ -1,0 +1,37 @@
+<!--this file name is tablename.detail-->
+
+{% extends 'portalapp/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class='text-center container'>
+
+    <div class="container">
+            
+        <div class="content-section p-0 mt-5">
+            <div class="m-3">
+                <h2>{{notes.title}}</h2>
+            </div>
+
+            <hr class="p-0 m-0">
+            <p class="description m-5 p-5">
+                {{notes.description}}
+            </p>
+            <hr>
+        </div>
+
+    </div>
+    <div class=" container">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Notes Updation</legend>
+            </fieldset>
+            <div class="form-group">
+                <button href="{% url 'update' %}" class="btn btn-outline-info" type="submit">
+                    Update/Add Content in Notes
+                </button>
+            </div>
+    </div>
+
+</section>
+
+{% endblock content %}
